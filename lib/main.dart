@@ -1,4 +1,4 @@
-import 'package:app_abc_aplication/screens/home.dart';
+import 'package:app_abc_aplication/screens/Apple.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:  homescreen(),
+      home:  Apple(),
     );
   }
 }

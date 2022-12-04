@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unused_import, implementation_imports, camel_case_types, unnecessary_import, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, unused_import, implementation_imports, camel_case_types, unnecessary_import, prefer_const_literals_to_create_immutables, file_names
 
 import 'dart:ui';
 
@@ -7,21 +7,20 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:lottie/lottie.dart';
 
-class homescreen extends StatefulWidget {
-  const homescreen({super.key});
+class Apple extends StatefulWidget {
+  const Apple({super.key});
 
   @override
-  State<homescreen> createState() => _homescreenState();
+  State<Apple> createState() => _AppleState();
 }
 
-class _homescreenState extends State<homescreen> {
+class _AppleState extends State<Apple> {
   @override
   Widget build(BuildContext context) {
     var scHeight = MediaQuery.of(context).size.height;
     var scWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        //  appBar: AppBar( title: Center(child: Text("ABC App",style: TextStyle(color:Colors.yellow ),)),backgroundColor: Colors.purple,),
         body: Stack(
           clipBehavior: Clip.none,
           children: [
@@ -35,12 +34,12 @@ class _homescreenState extends State<homescreen> {
                     fit: BoxFit.cover)),
             Row(
               children: [
-                GestureDetector(
+                InkWell(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => homescreen(),
+                            builder: (context) => Apple(),
                           ));
                     },
                     child: SizedBox(
@@ -49,12 +48,12 @@ class _homescreenState extends State<homescreen> {
                         child:
                             Image(image: AssetImage("Images/Left_arrow.png")))),
                 Spacer(),
-                GestureDetector(
+                InkWell(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => homescreen(),
+                            builder: (context) => Apple(),
                           ));
                     },
                     child: SizedBox(
@@ -106,8 +105,8 @@ class _homescreenState extends State<homescreen> {
               ),
             ),
              Positioned(
-                top: 270,
-                left: 10,
+                top: scHeight*.66,
+                left: scWidth*.01,
                 child: SizedBox(
                     height: 100,
                     width: 100,
