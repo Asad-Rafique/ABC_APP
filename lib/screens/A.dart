@@ -7,14 +7,14 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:lottie/lottie.dart';
 
-class Apple extends StatefulWidget {
-  const Apple({super.key});
+class A extends StatefulWidget {
+  const A({super.key});
 
   @override
-  State<Apple> createState() => _AppleState();
+  State<A> createState() => _AState();
 }
 
-class _AppleState extends State<Apple> {
+class _AState extends State<A> {
   @override
   Widget build(BuildContext context) {
     var scHeight = MediaQuery.of(context).size.height;
@@ -39,7 +39,7 @@ class _AppleState extends State<Apple> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Apple(),
+                            builder: (context) => A(),
                           ));
                     },
                     child: SizedBox(
@@ -53,7 +53,7 @@ class _AppleState extends State<Apple> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Apple(),
+                            builder: (context) => A(),
                           ));
                     },
                     child: SizedBox(
